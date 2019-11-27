@@ -1,0 +1,20 @@
+version: "3"
+services:
+  slack-reader:
+    build:
+      context: ..
+      dockerfile: docker/reader.Dockerfile
+    image: slack-reader:local
+    volumes:
+      - ..:/workspace
+    env_file:
+      - ../env/reader.env
+  slack-bot:
+    build:
+      context: ..
+      dockerfile: docker/bot.Dockerfile
+    image: slack-bot:local
+    volumes:
+      - ..:/workspace
+    env_file:
+      - ../env/bot.env
