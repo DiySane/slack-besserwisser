@@ -1,3 +1,15 @@
-slackclient==2.3.1
+# slackclient==2.3.1
 pandas==0.25.2
+# slackeventsapi
+slackclient>=2.7.1
+slackeventsapi>=2.1.0
+coveralls<2
+pytest<6 # python 2.7 requires pytest 4
+pytest-flask<2
+pytest-mock<2
+pytest-cov<3
+pytest-pythonpath<0.8
+testfixtures<7
+werkzeug<2
 git+https://github.com/Peltarion/sidekick#egg=sidekick
+# git+https://github.com/slackapi/python-slack-events-api#egg=slackeventsapi
